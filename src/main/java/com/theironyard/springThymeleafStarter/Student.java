@@ -1,6 +1,8 @@
 package com.theironyard.springThymeleafStarter;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Student {
 
     private String firstName;
@@ -34,4 +36,16 @@ public class Student {
     public void setGrade(Grade grade) {
         this.grade = grade;
     }
+
+    public boolean isEnrolled() {
+        return enrolled;
+    }
+
+    public void setEnrolled(boolean enrolled) {
+        this.enrolled = enrolled;
+    }
+
+    @Autowired
+    private boolean enrolled;
+
 }
